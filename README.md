@@ -15,3 +15,55 @@ Still need:
 - RESTful - index, show, create, update, destroy
 
 ### Index
+Controller
+```ruby
+def index
+  students = Student.all
+  render json: students
+end
+```
+- get localhost:3000/students
+
+### Show
+Controller
+```ruby
+def show
+  student = Student.find(params[:id])
+  render json: student
+end
+```
+- get localhost:3000/students/1
+
+### Create
+Controller
+```ruby
+def create
+  student = Student.create(student_params)
+  if student.valid?
+    render json: student
+  else
+    render json: student.errors
+  end
+end
+
+private
+def student_params
+  params.require(:student).permit(:name, :cohort)
+end
+```
+- post localhost:3000/students
+
+### Update
+Controller
+```ruby
+def update
+  student = Student.find(params[:id])
+  student.update(student_params)
+  if student.valid?
+    render json: student
+  else
+    render json: student.errors
+  end
+end
+```
+- patch localhost:3000/students/4
