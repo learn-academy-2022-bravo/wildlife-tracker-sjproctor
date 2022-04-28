@@ -1,24 +1,17 @@
-# README
+# Tracker App - Rails API 4/28/2022
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Setup:
+- rails new tracker-app -d postgresql -T
+- added the remote from github
+- initial commit to main
+- added RSpec
+- Student tracker - name and cohort
+- rails g resource Student name:string cohort:string
+- rails routes - tell you all the route details
 
-Things you may want to cover:
+Still need:
+- CRUD
+- http verbs
+- RESTful - index, show, create, update, destroy
 
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+### Index
